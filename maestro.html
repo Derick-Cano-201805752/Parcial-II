@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>PUESTOS</title>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- CONEXION CON JQUER -->
+	<script src="http://code.jquery.com/jquery-3.5.0.min.js"
+		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+	<!-- conexion con documentos JS 		-->
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="app.js"></script>
+
+	<!-- navegacion de la aplicacion -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="index.html" class="navbar-brand">Inicio /</a>
+		<a href="maestro.html" class="navbar-brand">Maestros /</a>
+
+		<ul class="navbar-nav ml-auto">
+			<form class="form-inline my-2 my-ml-0">
+				<!-- EL id funcionara mas adelante para usarlo con php SEARCH-->
+				<input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar">
+			</form>
+		</ul>
+	</nav>
+	<div class="container p-4">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="card">
+					<div class="card-body">
+						<!-- nombre de la clase con la que llamaremos al formulario TASK-FORM para agregar datos -->
+						<form id="task-form">
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos NAME -->
+								<input type="text" id="maestroid" placeholder="Codigo de Maestro" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="text" id="dpi" placeholder="DPI" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="text" id="nombre" placeholder="Nombre" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="text" id="apellido" placeholder="Apellido" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="text" id="telefono" placeholder="Teléfono" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="email" id="correo" placeholder="Correo" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<!-- los id seran los identificadores de los campos DESCRIPTION -->
+								<input type="text" id="fechanac" placeholder="Fecha Nacimiento" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block text-center">
+									GUARDAR TAREA
+								</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-7">
+				<!-- id servira como identificador TASK RESULT -->
+				<div class="card my-4" id="task-result">
+					<div class="card-body">
+						<!-- CONTAINER servira como identificador para mostrar los datos-->
+						<ul id="container"> </ul>
+
+					</div>
+
+				</div>
+				<table class="table table-bordered tables-sm">
+					<thead>
+						<!-- nombre de los campos en la tabla-->
+						<td>ID</td>
+						<td>DPI</td>
+						<td>NOMBRE</td>
+						<td>APELLIDO</td>
+						<td>TELEFONO</td>
+						<td>CORREO</td>
+						<td>NACIMIENTO</td>
+						
+					</thead>
+					<!-- el ID TASK identificara cuando llamemos con un SCRIPT los valores de la tabla -->
+					<!-- lo utilizaremos para enlazarlo con el documento TASK-LIST-->
+					<tbody id="task">
+
+					</tbody>
+
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+
+</html>
